@@ -1,0 +1,38 @@
+{
+  "description": "Allows to copy video url conveniently in order to download / watch it outside of the browser",
+  "manifest_version": 2,
+  "name": "Video url copy",
+  "version": "0.1",
+  "icons": {
+    "48": "icons/vid-48.png",
+    "900": "icons/vid-900.png"
+  }, 
+
+  "browser_action": {
+    "default_icon": "icons/vid-48.png",
+    "default_title": "Copy video url"
+  },
+
+    "commands": {
+      "vid-copy": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+U"
+        },
+        "description": "Copy video url"
+      }
+    },
+
+  "permissions": [
+      "activeTab",
+      "storage"
+  ],
+
+  "options_ui": {
+    "page": "settings/options.html"
+  },
+
+  "background": {
+      "scripts": ["vid-copy.js"]
+  }
+
+}
